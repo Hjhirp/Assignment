@@ -4,7 +4,25 @@ Welcome to the GitHub repository containing the solution for the problem stateme
 
 ## Overview
 
-The solution revolves around converting radian measures to Cartesian coordinates, identifying potential line intersections, and evaluating these intersections in relation to a predefined circle. The core logic of the solution is encapsulated in a series of functions, each responsible for a distinct aspect of the problem-solving process.
+The solution revolves around converting radian measures to Cartesian coordinates, identifying potential line intersections, and evaluating these intersections within a predefined circle. The core logic of the solution is encapsulated in a series of functions, each responsible for a distinct aspect of the problem-solving process.
+
+
+### Functions Overview
+
+- `input_to_dict(list_, list2_)`: Takes two lists, one of radian measures and another of line identifiers, and maps each line to its start and end points in Cartesian coordinates, storing this information in a dictionary.
+
+- `convert_to_x_y(radian)`: Converts a radian measure to a Cartesian coordinate (x, y).
+
+- `slope(x1, y1, x2, y2)`: Calculates the slope of a line segment given its start and end points.
+
+- `intercept(x1, y1, x2, y2)`: Calculates the y-intercept of a line segment given its start and end points.
+
+- `intersection(x1, y1, x2, y2, x3, y3, x4, y4)`: Determines the intersection point of two line segments and checks if the distance of this point from the origin is greater than 1.
+
+- `find_intersection(comb, start_end_map_dict)`: Takes combinations of line segment indices and a dictionary of line segments to calculate how many intersect within the specified boundary.
+
+- `comb(n)`: Generates all possible 2-item combinations of line indices up to `n`.
+
 
 ## Solution Flow
 
@@ -27,7 +45,3 @@ The code execution follows a structured flow, outlined as follows:
 ## Total Complexity
 
 Considering the steps outlined above, the total computational complexity of the solution is O(2m + m^2 + 1), which simplifies to O(m^2), where `m` represents the number of lines.
-
-## Conclusion
-
-This repository provides a detailed and structured solution to the problem statement by Structify.ai, focusing on clarity, efficiency, and the application of mathematical and algorithmic concepts. We invite you to explore the solution and leverage the insights provided for your applications.
